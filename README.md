@@ -6,4 +6,4 @@ Finding the ground state of large molecules is a core problem in quantum chemist
 
 The Custom_Ansatz_GS file shows that a better ground state is approximated for the example of a Heisenberg model on a kagome lattice as in the 2023 IBM open science prize.
 
-The example_BeH2_gs file shows base case example from which we will to apply speed ups.
+The example_BeH2_gs file shows a base case example from which we will to apply speed ups.
