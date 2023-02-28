@@ -1,7 +1,5 @@
 
-ADAPT VQE (Pennylane): In the Single-Double-gates file, we tried using ADAPT VQE for 4 electron and 6 orbitals with noiseless simulator. Note that this corresponds to freezing/removing the core orbital of 1s for Be atom. We use UCCSD ansatz with single and double excitations. For different such excitations, we look at the gradient and remove the excitations for which the gradient is 0. After using only non-zero excitations, we use it as the ansatz to get the GS Energy value as -14.8244 Ha
-
-Even though this value is the lowest among any other (electron,orbital) combination, it's not good enough as we got better results using another method described above.
+ADAPT VQE (Pennylane): In the Single-Double-gates file, we tried using ADAPT VQE for 4 electron and 6 orbitals with noiseless simulator. Note that this corresponds to freezing/removing the core orbital of 1s for Be atom. We use UCCSD ansatz with single and double excitations. For different such excitations, we look at the gradient and remove the excitations for which the gradient is 0. After using only non-zero excitations, we use it as the ansatz to get the GS Energy value as -15.59 Ha which is very close to the actual one. The time used for this calculation is also less than a minute for 20 iterations
 
 
 Implementation of paper: Doubling the Size of Quantum Simulators by Entanglement Forging by Andrew Eddins
