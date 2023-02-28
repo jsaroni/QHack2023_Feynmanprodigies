@@ -12,7 +12,7 @@ the ground state energy of the molecule.
 H|Φ〉 = EG |Φ〉 (1)
 Knowing the ground state energy of a molecule can help predict its reactivity, chemical stability, and spectroscopic
 properties. With this motivation, we employ different VQE (variational quantum eigensolver) methods.
-VQE stands for Variational Quantum Eigensolver [2], which is a quantum algorithm designed to estimate the ground
+VQE stands for Variational Quantum Eigensolver, which is a quantum algorithm designed to estimate the ground
 state energy of a quantum system using quantum computers. The goal of VQE is to find the lowest energy state of
 a molecule, which is important for understanding its chemical properties and behavior. The algorithm starts with
 an initial guess for the wave function of the molecule and then uses a classical optimizer to adjust the parameters of
