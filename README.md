@@ -1,10 +1,20 @@
 # QHack2023_Feynman prodigies
 
-
-Finding the ground state of large molecules is a core problem in quantum chemistry and physics. In this project, we will compare the performance of different methodologies for finding the ground state of the molecule BeH2. We use a range of methods including orbital freezing, active space transformation, circuit cutting and knitting technique, and Adaptive VQE. We also use error mitigation including Twirled Readout Error eXtinction, Zero-Noise Extrapolation within qiskit runtime where we can also use Probabilistic Error Cancellation.
-
-In final_submission.ipynb we describe the implementation of different the methodologies to find the ground state of the molecule BeH2, each with their own merits and drawbacks. The methods consider only single and double excitations. Some greatly simplify the model while sacrificing chemical accuracy while others use error mitigation more efficiently through qiskit runtime which works well with hybrid algorithms such as VQE.
-
-We are trying to find the ground state of BeH2, so it is worth knowing more on its physical chemistry. Beryllium has chemical formula 1s2 2s2 and the two hydrogens 1s1 in electron configuration notation. When the molecule BeH2 is formed, the s orbitals from the two hydrogens hybridize with the p orbitals from beryllium to form two sp molecular orbital bonds that want to be as far away from each other as possible due to electron repulsion and this results in a linear molecule. We use the sto3g basis to approximate slater type orbitals.
-
-The first method is based on a crude approximation, restricting the Hilbert space to an active space defined by unbonded electrons within the BeH2 molecule.
+We are trying to find the ground state of BeH2, so it is worth knowing more about its physical chemistry. In the
+formation of BeH2, the 2s orbital of beryllium and the 1s orbitals of both hydrogen atoms combine to form two
+molecular orbitals: a bonding molecular orbital and an antibonding molecular orbital. The molecule is linear, with a
+bond angle of 180 degrees, and the two hydrogen atoms occupy the antibonding molecular orbital. The task is to find
+the ground state energy of the molecule.
+H|Φ〉 = EG |Φ〉 (1)
+Knowing the ground state energy of a molecule can help predict its reactivity, chemical stability, and spectroscopic
+properties. With this motivation, we employ different VQE (variational quantum eigensolver) methods.
+VQE stands for Variational Quantum Eigensolver [2], which is a quantum algorithm designed to estimate the ground
+state energy of a quantum system using quantum computers. The goal of VQE is to find the lowest energy state of
+a molecule, which is important for understanding its chemical properties and behavior. The algorithm starts with
+an initial guess for the wave function of the molecule and then uses a classical optimizer to adjust the parameters of
+the wave function to minimize the energy. The adjusted wave function is then sent to the quantum computer, which
+calculates the energy of the wave function. This process is repeated iteratively, with the classical optimizer updating
+the wave function parameters and the quantum computer calculating the energy until the energy converges to the
+ground state energy of the molecule.
+We have the vanilla flavor VQE [3] method; then we explore the Tetris Adaptive VQE [4], and we finally worked with
+the Adaptive VQE [5, 6] method, which gave us the best results.
