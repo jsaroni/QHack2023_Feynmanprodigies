@@ -6,3 +6,6 @@ Even though this value is the lowest among any other (electron,orbital) combinat
 
 Implementation of paper: Doubling the Size of Quantum Simulators by Entanglement Forging by Andrew Eddins
 We implement the circuit of this paper for BeH2 using entanglement forging. We get a convergence but it converges to a suboptimal value. This suggests that the Ansatz provided in the paper is not based on the state generated, but rather the overall molecule through classical computation. The idea is to do a Schmidt decomposition of circuit into two parts with an interacting term. After 2 X gates, we get the same \phi state as mentioned in the paper. Perhaps, either one needs more hop gates or the effective computation bottleneck is determined by the classical comptutation instead. 
+
+
+We look at orbitals freezing and see how far are the values when only the core orbital is frozen vs when another orbital of Be is frozen. The difference between actual energy and the VQE GS energy is the same for both the cases. When we remove one orbital (perpendicular to the plane of other two p orbitals), the energy does not change because the excitation does not happen between the orbitals. This method, however, is not very robust to noise, due to multiple reasons. The primary reason is the size of the system. The secondary reason is the depth of the circuit with 2-qubit gates. 
