@@ -73,13 +73,4 @@ simulations, optimization problems, and machine learning tasks. It is a promisin
 limitations of noisy, near-term quantum devices and enabling the development of more accurate and reliable quantum
 algorithms.
 
-Approach
 
-
-First, we do the usual hybrid VQE algorithm using single and double excitations UCCSD strategy. We use all such
-excitations to come up with the ground state energy calculation.
-For this setup, we use 4 electrons in 6 orbitals inside the molecule. The pair of electrons in the 1s orbital(core) of
-Be atom is stable. Therefore, we don’t include them in our active space. We use the sto-3g basis set and two-qubit
-reduction method using parity mapping to reduce the system size without affecting the calculation, due to symmetry.
-We first find the true ground state energy, which we will use throughout the file for reference, as the target. Note that
-this is calculated using NumpyEigenSolver.
