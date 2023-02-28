@@ -1,4 +1,4 @@
-# QHack2023_Feynmanprodigies
+# QHack2023_Feynman prodigies
 
 
 Finding the ground state of large molecules is a core problem in quantum chemistry and physics. In this project, we will compare the performance of different methodologies for finding the ground state of the molecule BeH2. We use a range of methods including orbital freezing, active space transformation, circuit cutting and knitting technique, and Adaptive VQE. We also use error mitigation including Twirled Readout Error eXtinction, Zero-Noise Extrapolation, and Probabilistic Error Cancellation intrgrated within qiskit runtime.
