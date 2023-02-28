@@ -38,7 +38,7 @@ has the potential to enable new breakthroughs in quantum technology.
 Entanglement forging
 
 
-Entanglement forging 1 2 refers to a hypothetical process in which two parties can create a shared quantum state
+Entanglement forging refers to a hypothetical process in which two parties can create a shared quantum state
 without actually having access to an entangled pair of qubits. This is accomplished through a combination of quan-
 tum operations and classical communication and would represent a significant breakthrough in the field of quantum
 information processing. The basic idea behind entanglement forging is to start with two separable qubits (i.e., qubits
