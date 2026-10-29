@@ -1,4 +1,4 @@
-# QHack2023_Feynman prodigies
+# QHack2023_Feynman_prodigies
 
 
 Introduction 
